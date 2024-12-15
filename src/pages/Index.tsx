@@ -14,7 +14,7 @@ const Index = () => {
 
   const highlightExperience = () => {
     setIsHighlighted(true);
-    setTimeout(() => setIsHighlighted(false), 2000); // Remove highlight after 2 seconds
+    setTimeout(() => setIsHighlighted(false), 2000);
   };
 
   return (
@@ -47,10 +47,40 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className={`py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted transition-colors duration-500 ${
+        isHighlighted ? 'bg-primary/10' : 'bg-muted'
+      }`}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Experience</h2>
+          <div className="grid grid-cols-1 gap-6">
+            <div className="bg-card rounded-lg p-6 shadow-sm hover:-translate-y-1 transition-transform hover:shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Data Scientist</h3>
+              <p className="text-muted-foreground mb-4">AAPI Data, Riverside | October 2023 - October 2024</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>Developed and maintained dashboards visualizing 2020 Census data</li>
+                <li>Collaborated with policy analysts to enhance the State Policy Portal</li>
+                <li>Performed descriptive analysis of the ACS IPUMS demographic data</li>
+                <li>Analyzed patterns and trends in campaign contributions</li>
+              </ul>
+            </div>
+            <div className="bg-card rounded-lg p-6 shadow-sm hover:-translate-y-1 transition-transform hover:shadow-lg">
+              <h3 className="text-xl font-semibold mb-2">Research Assistant</h3>
+              <p className="text-muted-foreground mb-4">Amrita School of Computing | January 2022 - April 2023</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>Led research on influential node identification in multilayered networks</li>
+                <li>Implemented clustering algorithms for network analysis</li>
+                <li>Published findings in peer-reviewed conferences</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section 
         ref={projectsRef}
-        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted scroll-mt-16"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-background scroll-mt-16"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Projects</h2>
@@ -76,27 +106,6 @@ const Index = () => {
               tags={["K-means", "DBSCAN", "Network Analysis"]}
               link="#"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className={`py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
-        isHighlighted ? 'bg-primary/10' : ''
-      }`}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Experience</h2>
-          <div className="space-y-8">
-            <div className="bg-card rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Data Scientist</h3>
-              <p className="text-muted-foreground mb-4">AAPI Data, Riverside | October 2023 - October 2024</p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Developed and maintained dashboards visualizing 2020 Census data</li>
-                <li>Collaborated with policy analysts to enhance the State Policy Portal</li>
-                <li>Performed descriptive analysis of the ACS IPUMS demographic data</li>
-                <li>Analyzed patterns and trends in campaign contributions</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
