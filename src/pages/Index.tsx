@@ -2,8 +2,21 @@ import { Github, Linkedin, Mail, Code, Briefcase, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
 import SkillCard from "@/components/SkillCard";
+import { useRef, useState } from "react";
 
 const Index = () => {
+  const projectsRef = useRef<HTMLElement>(null);
+  const [isHighlighted, setIsHighlighted] = useState(false);
+
+  const scrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const highlightExperience = () => {
+    setIsHighlighted(true);
+    setTimeout(() => setIsHighlighted(false), 2000); // Remove highlight after 2 seconds
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -16,7 +29,15 @@ const Index = () => {
             Data Scientist passionate about creating impactful solutions through data analysis and machine learning
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="default" size="lg" className="w-full sm:w-auto">
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="w-full sm:w-auto"
+              onClick={() => {
+                scrollToProjects();
+                highlightExperience();
+              }}
+            >
               View Projects
             </Button>
             <Button variant="outline" size="lg" className="w-full sm:w-auto">
@@ -27,7 +48,10 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted">
+      <section 
+        ref={projectsRef}
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted scroll-mt-16"
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -52,6 +76,27 @@ const Index = () => {
               tags={["K-means", "DBSCAN", "Network Analysis"]}
               link="#"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section className={`py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
+        isHighlighted ? 'bg-primary/10' : ''
+      }`}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Experience</h2>
+          <div className="space-y-8">
+            <div className="bg-card rounded-lg p-6 shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Data Scientist</h3>
+              <p className="text-muted-foreground mb-4">AAPI Data, Riverside | October 2023 - October 2024</p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>Developed and maintained dashboards visualizing 2020 Census data</li>
+                <li>Collaborated with policy analysts to enhance the State Policy Portal</li>
+                <li>Performed descriptive analysis of the ACS IPUMS demographic data</li>
+                <li>Analyzed patterns and trends in campaign contributions</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
