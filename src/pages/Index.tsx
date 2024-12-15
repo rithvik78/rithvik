@@ -64,15 +64,6 @@ const Index = () => {
                 <li>Analyzed patterns and trends in campaign contributions</li>
               </ul>
             </div>
-            <div className="bg-card rounded-lg p-6 shadow-sm hover:-translate-y-1 transition-transform hover:shadow-lg">
-              <h3 className="text-xl font-semibold mb-2">Research Assistant</h3>
-              <p className="text-muted-foreground mb-4">Amrita School of Computing | January 2022 - April 2023</p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Led research on influential node identification in multilayered networks</li>
-                <li>Implemented clustering algorithms for network analysis</li>
-                <li>Published findings in peer-reviewed conferences</li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
