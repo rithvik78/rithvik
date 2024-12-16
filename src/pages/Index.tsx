@@ -97,6 +97,20 @@ const Index = () => {
               tags={["K-means", "DBSCAN", "Network Analysis"]}
               link="#"
             />
+            <ProjectCard
+              title="Yelp Data Analysis"
+              description="Strategic business insights using SQL++ and AsterixDB"
+              image="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              tags={["SQL++", "AsterixDB", "Data Analysis"]}
+              link="#"
+            />
+            <ProjectCard
+              title="Crime Data Analysis"
+              description="Spatial analysis using Spark SQL and QGIS"
+              image="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+              tags={["Spark SQL", "QGIS", "Big Data"]}
+              link="#"
+            />
           </div>
         </div>
       </section>
