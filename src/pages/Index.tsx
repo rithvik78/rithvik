@@ -42,40 +42,10 @@ const Index = () => {
       technologies: ["Nvidia Jetson Nano", "Python", "TensorFlow", "OpenAI API", "YourTTS"]
     },
     {
-      title: "CryptoCart",
-      description: "Secure shopping platform with crypto payments integration",
-      fullDescription: "A modern e-commerce platform that enables secure cryptocurrency payments. The system integrates with MetaMask wallet and provides real-time conversion rates for multiple cryptocurrencies.",
-      image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247",
-      tags: ["MetaMask", "SQLAlchemy", "Python", "Crypto"],
-      link: "#",
-      features: [
-        "Cryptocurrency payment integration",
-        "Real-time price conversion",
-        "Secure wallet connections",
-        "Transaction history tracking"
-      ],
-      technologies: ["React", "Python", "MetaMask", "SQLAlchemy", "Web3.js"]
-    },
-    {
-      title: "Network Analysis",
-      description: "Influential node identification in multilayered networks",
-      fullDescription: "A comprehensive network analysis tool that identifies influential nodes in complex, multilayered networks using advanced clustering algorithms and graph theory principles.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      tags: ["K-means", "DBSCAN", "Network Analysis"],
-      link: "#",
-      features: [
-        "Multi-layer network visualization",
-        "Influential node detection",
-        "Cluster analysis with K-means and DBSCAN",
-        "Interactive network graphs"
-      ],
-      technologies: ["Python", "NetworkX", "Scikit-learn", "D3.js"]
-    },
-    {
       title: "Yelp Data Analysis",
       description: "Strategic business insights using SQL++ and AsterixDB",
       fullDescription: "An advanced data analysis platform that processes and analyzes Yelp's extensive dataset using SQL++ and AsterixDB to provide valuable business insights and trends.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      image: "https://trends.yelp.com/assets/img/homepage/cultural-7bf0df7b91.png",
       tags: ["SQL++", "AsterixDB", "Data Analysis"],
       link: "#",
       features: [
@@ -90,7 +60,7 @@ const Index = () => {
       title: "Crime Data Analysis",
       description: "Spatial analysis using Spark SQL and QGIS",
       fullDescription: "A sophisticated crime data analysis tool that combines Spark SQL's processing power with QGIS's spatial analysis capabilities to identify and visualize crime patterns.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      image: "https://images.squarespace-cdn.com/content/v1/5e3704f18a73ef3c81be8e7e/1585321773266-4T2GZEU0XFQE0CW4W9EL/ThinkGeo%2BChicago%2Bcrime%2Bdot%2Bdensity%2Bsample.jpg",
       tags: ["Spark SQL", "QGIS", "Big Data"],
       link: "#",
       features: [
@@ -100,6 +70,36 @@ const Index = () => {
         "Predictive hotspot mapping"
       ],
       technologies: ["Spark SQL", "QGIS", "Python", "PostgreSQL"]
+    },
+    {
+      title: "Network Analysis",
+      description: "Influential node identification in multilayered networks",
+      fullDescription: "A comprehensive network analysis tool that identifies influential nodes in complex, multilayered networks using advanced clustering algorithms and graph theory principles.",
+      image: "https://ars.els-cdn.com/content/image/1-s2.0-S0736585322001095-gr9.jpg",
+      tags: ["K-means", "DBSCAN", "Network Analysis"],
+      link: "#",
+      features: [
+        "Multi-layer network visualization",
+        "Influential node detection",
+        "Cluster analysis with K-means and DBSCAN",
+        "Interactive network graphs"
+      ],
+      technologies: ["Python", "NetworkX", "Scikit-learn", "D3.js"]
+    },
+  {
+      title: "CryptoCart",
+      description: "Secure shopping platform with crypto payments integration",
+      fullDescription: "A modern e-commerce platform that enables secure cryptocurrency payments. The system integrates with MetaMask wallet and provides real-time conversion rates for multiple cryptocurrencies.",
+      image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247",
+      tags: ["MetaMask", "SQLAlchemy", "Python", "Crypto"],
+      link: "#",
+      features: [
+        "Cryptocurrency payment integration",
+        "Real-time price conversion",
+        "Secure wallet connections",
+        "Transaction history tracking"
+      ],
+      technologies: ["React", "Python", "MetaMask", "SQLAlchemy", "Web3.js"]
     }
   ];
 
