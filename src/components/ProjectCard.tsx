@@ -10,19 +10,19 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, image, tags, link }: ProjectCardProps) => {
   return (
-    <Card className="overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg">
+    <Card className="overflow-hidden card-hover bg-white/80 backdrop-blur-sm">
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
+        <img src={image} alt={title} className="w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300" />
         <CardHeader>
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>{description}</CardDescription>
+          <CardTitle className="text-xl font-semibold">{title}</CardTitle>
+          <CardDescription className="text-muted-foreground">{description}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
               >
                 {tag}
               </span>

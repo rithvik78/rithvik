@@ -9,15 +9,15 @@ interface SkillCardProps {
 
 const SkillCard = ({ icon: Icon, title, items }: SkillCardProps) => {
   return (
-    <Card className="transition-transform hover:-translate-y-1 hover:shadow-lg">
+    <Card className="card-hover bg-white/10 backdrop-blur-sm border-white/20">
       <CardHeader>
-        <Icon className="w-8 h-8 text-primary mb-2" />
-        <CardTitle>{title}</CardTitle>
+        <Icon className="w-10 h-10 text-white mb-3" />
+        <CardTitle className="text-white">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <ul className="space-y-2">
           {items.map((item) => (
-            <li key={item} className="text-muted-foreground">
+            <li key={item} className="text-white/80">
               {item}
             </li>
           ))}

@@ -21,18 +21,18 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="min-h-[90vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-            Hi, I'm <span className="text-primary">Rithvik Vukka</span>
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            Hi, I'm <span className="hero-gradient">Rithvik Vukka</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Data Scientist passionate about creating impactful solutions through data analysis and machine learning
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-6 justify-center mt-8">
             <Button 
               variant="default" 
               size="lg" 
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto transform hover:scale-105 transition-transform duration-200 shadow-lg hover:shadow-xl"
               onClick={() => {
                 scrollToProjects();
                 highlightExperience();
@@ -40,7 +40,11 @@ const Index = () => {
             >
               View Projects
             </Button>
-            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full sm:w-auto transform hover:scale-105 transition-transform duration-200 shadow hover:shadow-lg"
+            >
               Contact Me
             </Button>
           </div>
@@ -48,16 +52,16 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section className={`py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted transition-colors duration-500 ${
-        isHighlighted ? 'bg-primary/10' : 'bg-muted'
-      }`}>
+      <section className={`py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
+        isHighlighted ? 'bg-primary/10' : 'bg-white/80'
+      } backdrop-blur-sm`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Experience</h2>
-          <div className="grid grid-cols-1 gap-6">
-            <div className="bg-card rounded-lg p-6 shadow-sm hover:-translate-y-1 transition-transform hover:shadow-lg">
-              <h3 className="text-xl font-semibold mb-2">Data Scientist</h3>
-              <p className="text-muted-foreground mb-4">AAPI Data, Riverside | October 2023 - October 2024</p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Experience</h2>
+          <div className="grid grid-cols-1 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-2xl font-semibold mb-3">Data Scientist</h3>
+              <p className="text-muted-foreground mb-6">AAPI Data, Riverside | October 2023 - October 2024</p>
+              <ul className="list-disc list-inside space-y-4 text-muted-foreground">
                 <li>Developed and maintained dashboards visualizing 2020 Census data for over 40 Asian and 34 Native Hawaiian/Pacific Islander origin groups, improving community access to essential data resources. <a href="http://counts.aapidata.com/census2020/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View Census Dashboard</a></li>
                 <li>Enhanced the State Policy Portal, offering comprehensive insights into legislative trends affecting AAPI communities and fostering collaboration between state-level advocacy groups. <a href="http://facts.aapidata.com/policy-portal/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View Policy Portal</a></li>
                 <li>Conducted longitudinal analysis of state legislative representation, including the identification of patterns in representation by Asian American ethnic names.</li>
@@ -73,11 +77,11 @@ const Index = () => {
       {/* Projects Section */}
       <section 
         ref={projectsRef}
-        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-background scroll-mt-16"
+        className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm scroll-mt-16"
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Projects</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
               title="EdgeAvatar"
               description="Edge computing-based Text-to-Speech system using Nvidia Jetson Nano"
@@ -118,10 +122,10 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 section-gradient text-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Skills</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Skills</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <SkillCard
               icon={Code}
               title="Languages"
@@ -147,24 +151,24 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-muted">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white/80 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12">Get In Touch</h2>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12">Get In Touch</h2>
+          <div className="flex flex-wrap gap-6 justify-center">
             <a href="https://github.com/rithvik78" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto transform hover:scale-105 transition-transform duration-200">
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
               </Button>
             </a>
             <a href="https://www.linkedin.com/in/rithvik-vukka/" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto transform hover:scale-105 transition-transform duration-200">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </Button>
             </a>
             <a href="mailto:rvukk002@ucr.edu">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto transform hover:scale-105 transition-transform duration-200">
                 <Mail className="mr-2 h-5 w-5" />
                 Email
               </Button>
