@@ -58,10 +58,12 @@ const Index = () => {
               <h3 className="text-xl font-semibold mb-2">Data Scientist</h3>
               <p className="text-muted-foreground mb-4">AAPI Data, Riverside | October 2023 - October 2024</p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Developed and maintained dashboards visualizing 2020 Census data</li>
-                <li>Collaborated with policy analysts to enhance the State Policy Portal</li>
-                <li>Performed descriptive analysis of the ACS IPUMS demographic data</li>
-                <li>Analyzed patterns and trends in campaign contributions</li>
+                <li>Developed and maintained dashboards visualizing 2020 Census data for over 40 Asian and 34 Native Hawaiian/Pacific Islander origin groups, improving community access to essential data resources. <a href="http://counts.aapidata.com/census2020/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View Census Dashboard</a></li>
+                <li>Enhanced the State Policy Portal, offering comprehensive insights into legislative trends affecting AAPI communities and fostering collaboration between state-level advocacy groups. <a href="http://facts.aapidata.com/policy-portal/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View Policy Portal</a></li>
+                <li>Conducted longitudinal analysis of state legislative representation, including the identification of patterns in representation by Asian American ethnic names.</li>
+                <li>Performed descriptive analysis of the ACS IPUMS demographic data, focusing on Korea Town supermarket workers, utilizing the cleaned ACS 5-year dataset provided by the UCLA Labor Center.</li>
+                <li>Analyzed patterns and trends in campaign contributions to federal offices based on public FEC records, providing insights into racial and ethnic contributions. <a href="http://facts.aapidata.com/campaign_contributions/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">View Campaign Contributions</a></li>
+                <li>Built interactive web applications using R Shiny, Python and SQL to enhance user navigation of demographic data, adopted by multiple community organizations.</li>
               </ul>
             </div>
           </div>
