@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/ProjectCard";
 import SkillCard from "@/components/SkillCard";
 import { useRef, useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const projectsRef = useRef<HTMLElement>(null);
@@ -16,6 +24,84 @@ const Index = () => {
     setIsHighlighted(true);
     setTimeout(() => setIsHighlighted(false), 2000);
   };
+
+  const projectsData = [
+    {
+      title: "EdgeAvatar",
+      description: "Edge computing-based Text-to-Speech system using Nvidia Jetson Nano",
+      fullDescription: "An innovative edge computing project that implements a Text-to-Speech system on Nvidia Jetson Nano hardware. This system processes text input locally and generates natural-sounding speech output with minimal latency.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      tags: ["Edge Computing", "TTS", "OpenAI API", "YourTTS"],
+      link: "#",
+      features: [
+        "Real-time text-to-speech conversion",
+        "Low-latency processing on edge device",
+        "Natural voice synthesis using YourTTS",
+        "OpenAI API integration for enhanced text processing"
+      ],
+      technologies: ["Nvidia Jetson Nano", "Python", "TensorFlow", "OpenAI API", "YourTTS"]
+    },
+    {
+      title: "CryptoCart",
+      description: "Secure shopping platform with crypto payments integration",
+      fullDescription: "A modern e-commerce platform that enables secure cryptocurrency payments. The system integrates with MetaMask wallet and provides real-time conversion rates for multiple cryptocurrencies.",
+      image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247",
+      tags: ["MetaMask", "SQLAlchemy", "Python", "Crypto"],
+      link: "#",
+      features: [
+        "Cryptocurrency payment integration",
+        "Real-time price conversion",
+        "Secure wallet connections",
+        "Transaction history tracking"
+      ],
+      technologies: ["React", "Python", "MetaMask", "SQLAlchemy", "Web3.js"]
+    },
+    {
+      title: "Network Analysis",
+      description: "Influential node identification in multilayered networks",
+      fullDescription: "A comprehensive network analysis tool that identifies influential nodes in complex, multilayered networks using advanced clustering algorithms and graph theory principles.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      tags: ["K-means", "DBSCAN", "Network Analysis"],
+      link: "#",
+      features: [
+        "Multi-layer network visualization",
+        "Influential node detection",
+        "Cluster analysis with K-means and DBSCAN",
+        "Interactive network graphs"
+      ],
+      technologies: ["Python", "NetworkX", "Scikit-learn", "D3.js"]
+    },
+    {
+      title: "Yelp Data Analysis",
+      description: "Strategic business insights using SQL++ and AsterixDB",
+      fullDescription: "An advanced data analysis platform that processes and analyzes Yelp's extensive dataset using SQL++ and AsterixDB to provide valuable business insights and trends.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      tags: ["SQL++", "AsterixDB", "Data Analysis"],
+      link: "#",
+      features: [
+        "Large-scale data processing",
+        "Business trend analysis",
+        "Customer behavior insights",
+        "Interactive data visualization"
+      ],
+      technologies: ["SQL++", "AsterixDB", "Python", "Tableau"]
+    },
+    {
+      title: "Crime Data Analysis",
+      description: "Spatial analysis using Spark SQL and QGIS",
+      fullDescription: "A sophisticated crime data analysis tool that combines Spark SQL's processing power with QGIS's spatial analysis capabilities to identify and visualize crime patterns.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      tags: ["Spark SQL", "QGIS", "Big Data"],
+      link: "#",
+      features: [
+        "Spatial crime pattern analysis",
+        "Real-time data processing",
+        "Interactive map visualization",
+        "Predictive hotspot mapping"
+      ],
+      technologies: ["Spark SQL", "QGIS", "Python", "PostgreSQL"]
+    }
+  ];
 
   return (
     <div className="min-h-screen">
@@ -82,41 +168,12 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProjectCard
-              title="EdgeAvatar"
-              description="Edge computing-based Text-to-Speech system using Nvidia Jetson Nano"
-              image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-              tags={["Edge Computing", "TTS", "OpenAI API", "YourTTS"]}
-              link="#"
-            />
-            <ProjectCard
-              title="CryptoCart"
-              description="Secure shopping platform with crypto payments integration"
-              image="https://images.unsplash.com/photo-1621416894569-0f39ed31d247"
-              tags={["MetaMask", "SQLAlchemy", "Python", "Crypto"]}
-              link="#"
-            />
-            <ProjectCard
-              title="Network Analysis"
-              description="Influential node identification in multilayered networks"
-              image="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-              tags={["K-means", "DBSCAN", "Network Analysis"]}
-              link="#"
-            />
-            <ProjectCard
-              title="Yelp Data Analysis"
-              description="Strategic business insights using SQL++ and AsterixDB"
-              image="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              tags={["SQL++", "AsterixDB", "Data Analysis"]}
-              link="#"
-            />
-            <ProjectCard
-              title="Crime Data Analysis"
-              description="Spatial analysis using Spark SQL and QGIS"
-              image="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-              tags={["Spark SQL", "QGIS", "Big Data"]}
-              link="#"
-            />
+            {projectsData.map((project) => (
+              <ProjectCard
+                key={project.title}
+                {...project}
+              />
+            ))}
           </div>
         </div>
       </section>
