@@ -77,17 +77,17 @@ const Index = () => {
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProjectCard
-              title="Yelp Data Analysis"
-              description="Strategic business insights using SQL++ and AsterixDB"
-              image="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              tags={["SQL++", "AsterixDB", "Data Analysis"]}
+              title="EdgeAvatar"
+              description="Edge computing-based Text-to-Speech system using Nvidia Jetson Nano"
+              image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+              tags={["Edge Computing", "TTS", "OpenAI API", "YourTTS"]}
               link="#"
             />
             <ProjectCard
-              title="Crime Data Analysis"
-              description="Spatial analysis using Spark SQL and QGIS"
-              image="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-              tags={["Spark SQL", "QGIS", "Big Data"]}
+              title="CryptoCart"
+              description="Secure shopping platform with crypto payments integration"
+              image="https://images.unsplash.com/photo-1621416894569-0f39ed31d247"
+              tags={["MetaMask", "SQLAlchemy", "Python", "Crypto"]}
               link="#"
             />
             <ProjectCard
