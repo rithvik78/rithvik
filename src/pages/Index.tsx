@@ -27,6 +27,28 @@ const Index = () => {
 
   const projectsData = [
     {
+      title: "Fraud Detection System Development",
+      description: "Machine learning-based fraud detection system with 95% accuracy",
+      fullDescription: "Developed and fine-tuned machine learning models, including logistic regression and decision trees, to identify and prevent fraudulent activities on a digital platform. The system analyzes transactions in real-time and flags suspicious activities, significantly enhancing platform security and user trust.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      tags: ["Machine Learning", "Fraud Detection", "Real-time Analysis"],
+      link: "#",
+      features: [
+        "95% accuracy in fraud detection",
+        "Real-time transaction analysis system",
+        "Continuous model updates",
+        "Administrative monitoring dashboard",
+        "Automated suspicious activity flagging"
+      ],
+      technologies: [
+        "Python",
+        "Scikit-learn",
+        "TensorFlow",
+        "SQL",
+        "Real-time Analytics"
+      ]
+    },
+    {
       title: "EdgeAvatar",
       description: "Edge computing-based Text-to-Speech system using Nvidia Jetson Nano",
       fullDescription: "An innovative edge computing project that implements a Text-to-Speech system on Nvidia Jetson Nano hardware. This system processes text input locally and generates natural-sounding speech output with minimal latency.",
@@ -86,7 +108,7 @@ const Index = () => {
       ],
       technologies: ["Python", "NetworkX", "Scikit-learn", "D3.js"]
     },
-  {
+    {
       title: "CryptoCart",
       description: "Secure shopping platform with crypto payments integration",
       fullDescription: "A modern e-commerce platform that enables secure cryptocurrency payments. The system integrates with MetaMask wallet and provides real-time conversion rates for multiple cryptocurrencies.",
